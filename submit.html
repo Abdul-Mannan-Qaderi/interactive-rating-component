@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Submited</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<div class="container sub-cont">
+      <img src="./assets/images/illustration-thank-you.svg" alt="thank-you">
+			<p class="score-announce">You selected <span id="chosen">?</span> out of 5</p>
+			<h1>Thank you!</h1>
+			<p>
+				We appreciate you taking the time to give a rating. If you ever need
+				more support, don’t hesitate to get in touch!
+			</p>
+		</div>
+		<script>
+			// parse the query string
+			const params = new URLSearchParams(window.location.search);
+			const rating = params.get("rating");
+
+			if (rating) {
+				document.getElementById("chosen").textContent = rating;
+			}
+		</script>
+	</body>
+</html>
