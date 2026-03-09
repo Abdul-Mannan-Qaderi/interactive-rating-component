@@ -23,3 +23,158 @@
 - Weights: 400, 700
 
 */
+
+@font-face {
+	font-family: "Overpass";
+	src: url("./assets/fonts/Overpass-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+	--Orange-500: hsl(25, 97%, 53%);
+
+	--White: hsl(0, 100%, 100%);
+	--Grey-500: hsl(217, 12%, 63%);
+	--Grey-900: hsl(213, 20%, 18%);
+	--Grey-930: hsl(212, 17%, 23%);
+	--Grey-950: hsl(216, 12%, 8%);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 15px;
+	background-color: transparent
+}
+
+body {
+	font-family: "Overpass", sans-serif;
+	background-color: var(--Grey-950);
+	color: var(--White);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	width: vw;
+	margin: auto;
+}
+
+.container {
+	background: linear-gradient(to bottom, var(--Grey-900), hsl(210, 29%, 11%));
+	border-radius: 16px;
+	padding: 28px 24px;
+	width: 344px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	gap: 18px;
+}
+
+.sub-cont {
+	align-items: center;
+	text-align: center;
+}
+.score-announce {
+	width: fit-content;
+	background-color: var(--Grey-900);
+	padding: 6px 18px;
+	border-radius: 100px;
+	color: var(--Orange-500);
+	opacity: 0.8;
+	margin: 20px 0;
+}
+
+h1 {
+	font-size: 24px;
+	word-spacing: 3px;
+}
+
+form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	align-items: center;
+}
+
+p {
+	color: var(--Grey-500);
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+input[type="radio"] {
+	display: none;
+}
+
+.options {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+label,
+.img {
+	padding: 22px;
+	background-color: var(--Grey-930);
+	border-radius: 100px;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: var(--Grey-500);
+}
+label:hover {
+	background-color: var(--White);
+	color: var(--Grey-950);
+}
+label:active {
+	background-color: var(--Orange-500);
+}
+
+input:checked + label {
+	background-color: var(--Orange-500);
+	color: var(--White);
+}
+
+button {
+	padding: 16px 0;
+	width: 100%;
+	text-transform: uppercase;
+	background-color: var(--Orange-500);
+	color: var(--Grey-950);
+	border: none;
+	border-radius: 100px;
+	cursor: pointer;
+	transition: 0.2s;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+
+button:hover {
+	background-color: var(--White);
+	color: var(--Grey-950);
+}
+
+@media screen and (min-width: 734px) {
+	.container {
+		width: 400px;
+		padding: 28px 28px;
+	border-radius: 24px;
+	}
+
+	label,
+	.img {
+		padding: 28px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	body {
+		width: 1440px;
+	}
+}
